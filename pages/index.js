@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 
 import { server } from "../config/index";
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/hello`);
+  const res = await fetch(`${server}/api/hello`);
   const data = await res.json();
 
   return {
